@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { InputField } from "./InputField";
-import { UseFormRegister } from "react-hook-form";
 import { SYMBOLS } from "../../../constants/symbols";
 
 jest.mock("../InfoIcon/InfoIcon", () => (props: { tooltipText: string }) => (
@@ -8,7 +7,7 @@ jest.mock("../InfoIcon/InfoIcon", () => (props: { tooltipText: string }) => (
 ));
 
 describe("InputField component", () => {
-  const mockRegister: UseFormRegister<any> = jest.fn();
+  const mockRegister = jest.fn();
 
   it("renders the input with label and placeholder", () => {
     render(

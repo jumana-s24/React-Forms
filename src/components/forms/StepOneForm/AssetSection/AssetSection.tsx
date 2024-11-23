@@ -1,26 +1,27 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { UseFormRegister } from "react-hook-form";
+import { StepOneFormValues } from "../../../../types";
+import { InputField } from "../../../ui/InputField/InputField";
+import { SelectField } from "../../../ui/SelectField/SelectField";
 import {
   assetClassOptions,
   countries,
   energyClassOptions,
   objectStatusOptions,
-} from "../../../database";
-import { UseFormRegister } from "react-hook-form";
-import { InputField } from "../../ui/InputField/InputField";
-import { SelectField } from "../../ui/SelectField/SelectField";
-import InfoIcon from "../../ui/InfoIcon/InfoIcon";
-import { SYMBOLS } from "../../../constants/symbols";
+} from "../../../../database";
+import { SYMBOLS } from "../../../../constants/symbols";
+import InfoIcon from "../../../ui/InfoIcon/InfoIcon";
 
-interface Props {
+interface AssetSectionProps {
   index: number;
-  register: UseFormRegister<any>;
+  register: UseFormRegister<StepOneFormValues>;
   errors: any;
   remove: (index: number) => void;
   fieldsLength: number;
 }
 
-export const AssetSection: React.FC<Props> = ({
+export const AssetSection: React.FC<AssetSectionProps> = ({
   index,
   register,
   errors,
@@ -45,7 +46,7 @@ export const AssetSection: React.FC<Props> = ({
         )}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 mb-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 mb-16">
         <InputField
           label="Street"
           name={`assets[${index}].street`}
@@ -90,7 +91,7 @@ export const AssetSection: React.FC<Props> = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-3 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
         <InputField
           label="Plot area"
           name={`assets[${index}].plotArea`}
@@ -124,9 +125,9 @@ export const AssetSection: React.FC<Props> = ({
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-3 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
         <InputField
-          label="Year Of Construction"
+          label="Year of Construction"
           name={`assets[${index}].yearOfConstruction`}
           type="number"
           showInfoIcon
@@ -135,7 +136,7 @@ export const AssetSection: React.FC<Props> = ({
           errors={errors}
         />
         <InputField
-          label="Year Of Redevelopment"
+          label="Year of Redevelopment"
           name={`assets[${index}].yearOfRedevelopment`}
           type="number"
           showInfoIcon
@@ -150,21 +151,19 @@ export const AssetSection: React.FC<Props> = ({
             className="form-checkbox"
           />
           <div className="flex items-center">
-            <label className="text-sm text-gray-600 mr-2">
-              Monument Protection
-            </label>
+            <label className="text-gray-600 mr-2">Monument Protection</label>
             <InfoIcon tooltipText="Monument protection of the building: Alternative words: Denkmalschutz" />
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-3 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
         <SelectField
           label="Asset Class"
           name={`assets[${index}].assetClass`}
           options={assetClassOptions}
           showInfoIcon
-          tooltipText="The class of the asset. Alternative words:"
+          tooltipText="The class of the asset. Alternative words: Baujahr"
           defaultValue="Select the Asset Class"
           register={register}
           errors={errors}
@@ -193,7 +192,7 @@ export const AssetSection: React.FC<Props> = ({
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-3 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
         <InputField
           label="WALT"
           name={`assets[${index}].walt`}

@@ -1,12 +1,12 @@
 import React from "react";
 
-interface Props {
+interface TooltipProps {
   text: string;
 }
 
-const Tooltip: React.FC<Props> = ({ text }) => {
+const Tooltip: React.FC<TooltipProps> = ({ text }) => {
   return (
-    <div className="absolute bottom-full mb-1 max-w-4xl bg-gray-700 text-white text-xs rounded px-2 py-1 shadow-md z-10">
+    <div className="absolute left-1/2 transform -translate-x-1/2 w-[200px] bottom-full mb-1 bg-gray-700 text-white text-xs rounded p-2 shadow-md z-10">
       {text}
     </div>
   );

@@ -1,8 +1,8 @@
 import React from "react";
-import { useForm, UseFormRegister } from "react-hook-form";
+import { UseFormRegister } from "react-hook-form";
 import InfoIcon from "../InfoIcon/InfoIcon";
 
-interface Props {
+interface SelectFieldProps {
   label: string;
   name: string;
   options: string[];
@@ -15,7 +15,7 @@ interface Props {
   errors: any;
 }
 
-export const SelectField: React.FC<Props> = ({
+export const SelectField: React.FC<SelectFieldProps> = ({
   label,
   name,
   options,
@@ -37,7 +37,7 @@ export const SelectField: React.FC<Props> = ({
           errors[name] ? "border-red-500" : ""
         }`}
       >
-        <option value="">
+        <option value="" className="text-red-500">
           {showInfoIcon && tooltipText && (
             <InfoIcon tooltipText={tooltipText} />
           )}

@@ -1,10 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { OfferSection } from "./OfferSection";
-import { UseFormRegister } from "react-hook-form";
 
 describe("OfferSection component", () => {
   it("renders the OfferSection component correctly", () => {
-    const mockRegister: UseFormRegister<any> = jest.fn();
+    const mockRegister = jest.fn();
 
     render(<OfferSection register={mockRegister} errors={{}} />);
 

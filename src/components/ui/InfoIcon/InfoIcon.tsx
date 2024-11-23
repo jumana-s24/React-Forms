@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Tooltip from "../Tooltip/Tooltip";
 
-interface Props {
+interface InfoIconProps {
   tooltipText: string;
 }
 
-const InfoIcon: React.FC<Props> = ({ tooltipText }) => {
+const InfoIcon: React.FC<InfoIconProps> = ({ tooltipText }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

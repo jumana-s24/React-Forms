@@ -1,13 +1,12 @@
 import { render, screen, fireEvent, within } from "@testing-library/react";
 import { SelectField } from "./SelectField";
-import { UseFormRegister } from "react-hook-form";
 
 jest.mock("../InfoIcon/InfoIcon", () => (props: { tooltipText: string }) => (
   <div>{props.tooltipText}</div>
 ));
 
 describe("SelectField component", () => {
-  const mockRegister: UseFormRegister<any> = jest.fn();
+  const mockRegister = jest.fn();
 
   it("renders the select field with label and options", () => {
     render(

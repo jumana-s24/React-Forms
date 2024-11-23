@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { StepOneForm } from "../forms/StepOneForm/StepOneForm";
 import { StepTwoForm } from "../forms/StepTwoForm/StepTwoForm";
-import { InternalNote } from "../forms/InternalNote/InternalNote";
+import { InternalNote } from "../forms/StepOneForm/InternalNote/InternalNote";
 import "./App.css";
 
 export const App = () => {
@@ -14,7 +14,7 @@ export const App = () => {
   };
 
   return (
-    <div className="App px-10">
+    <div className="App px-4 md:px-10">
       <StepOneForm onContinue={scrollToStepTwo} />
       <div ref={stepTwoRef}>
         <StepTwoForm />

@@ -3,17 +3,7 @@ import { useForm } from "react-hook-form";
 import DateTimeDisplay from "../../ui/DateTimeDisplay/DateTimeDisplay";
 import { InputField } from "../../ui/InputField/InputField";
 import { SYMBOLS } from "../../../constants/symbols";
-
-interface StepTwoFormValues {
-  seller: string;
-  owner: string;
-  salesPrice: number;
-  commission: string;
-  revenuesActualPerYear: number;
-  revenuesTargetPerYear: number;
-  usableSpace: number;
-  grossFloorArea: number;
-}
+import { StepTwoFormValues } from "../../../types";
 
 export const StepTwoForm: React.FC = () => {
   const {
@@ -112,16 +102,16 @@ export const StepTwoForm: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex justify-between mt-6 mb-20">
-        <button className="bg-primary text-sm md:text-lg px-6 py-2 text-white rounded-md hover:bg-secondary  shadow uppercase">
+      <div className="flex justify-between mt-6 mb-10 md:mb-20">
+        <button className="bg-primary text-xs md:text-base px-1 md:px-6 py-2 text-white rounded-md hover:bg-secondary shadow uppercase">
           Save & Pause
         </button>
-        <button className="bg-primary text-sm md:text-lg px-6 py-2 text-white rounded-md hover:bg-secondary shadow uppercase">
+        <button className="bg-primary text-xs md:text-base px-1 md:px-6 py-2 text-white rounded-md hover:bg-secondary shadow uppercase">
           Save & Wait for Check
         </button>
         <button
           type="submit"
-          className="bg-primary text-sm md:text-lg px-6 py-2 text-white rounded-md hover:bg-secondary shadow uppercase"
+          className="bg-primary text-xs md:text-base px-1 md:px-6 py-2 text-white rounded-md hover:bg-secondary shadow uppercase"
         >
           Save & Finish
         </button>

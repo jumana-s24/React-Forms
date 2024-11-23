@@ -1,8 +1,8 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { UseFormRegister } from "react-hook-form";
 import InfoIcon from "../InfoIcon/InfoIcon";
 
-interface Props {
+interface InputFieldProps {
   label: string;
   name: string;
   type?: string;
@@ -13,10 +13,10 @@ interface Props {
   infoText?: string;
   className?: string;
   register: UseFormRegister<any>;
-  errors: Record<string, any>;
+  errors: any;
 }
 
-export const InputField = forwardRef<HTMLInputElement, Props>(
+export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
   (
     {
       label,
@@ -24,7 +24,6 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
       type = "text",
       register,
       errors,
-      required = false,
       showInfoIcon = false,
       tooltipText,
       symbol,
@@ -64,7 +63,7 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
           {symbol}
         </div>
 
-        <p className="text-left text-sm text-gray-400">{infoText}</p>
+        <p className="text-left text-sm text-gray-500">{infoText}</p>
 
         {errors[name] && (
           <p className="text-red-500 text-xs mt-1">

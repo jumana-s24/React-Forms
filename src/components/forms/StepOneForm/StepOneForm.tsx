@@ -3,38 +3,14 @@ import { useFieldArray, useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { OfferSection } from "../OfferSection/OfferSection";
-import { AssetSection } from "../AssetSection/AssetSection";
+import { Asset, StepOneFormValues } from "../../../types";
+import { AssetSection } from "./AssetSection/AssetSection";
 
-interface Props {
+interface StepOneFormProps {
   onContinue: () => void;
 }
 
-interface Asset {
-  id: number;
-  street: string;
-  number: string;
-  postcode: string;
-  city: string;
-  country: string;
-  plotArea: number;
-  usableArea: number;
-  yearlyRevenue: number;
-  yearOfConstruction: string;
-  yearOfRedevelopment: string;
-  monumentProtection: boolean;
-  assetClass: string;
-  objectStatus: string;
-  energyClass: string;
-  walt: string;
-  mainTenant: string;
-}
-
-export interface StepOneFormValues {
-  assets: Asset[];
-  offerName: string;
-}
-
-export const StepOneForm: React.FC<Props> = ({ onContinue }) => {
+export const StepOneForm: React.FC<StepOneFormProps> = ({ onContinue }) => {
   const {
     register,
     handleSubmit,
@@ -53,8 +29,8 @@ export const StepOneForm: React.FC<Props> = ({ onContinue }) => {
           plotArea: undefined,
           usableArea: undefined,
           yearlyRevenue: undefined,
-          yearOfConstruction: "",
-          yearOfRedevelopment: "",
+          yearOfConstruction: undefined,
+          yearOfRedevelopment: undefined,
           monumentProtection: false,
           assetClass: "",
           objectStatus: "",
@@ -87,8 +63,8 @@ export const StepOneForm: React.FC<Props> = ({ onContinue }) => {
       plotArea: 0,
       usableArea: 0,
       yearlyRevenue: 0,
-      yearOfConstruction: "",
-      yearOfRedevelopment: "",
+      yearOfConstruction: 0,
+      yearOfRedevelopment: 0,
       monumentProtection: false,
       assetClass: "",
       objectStatus: "",

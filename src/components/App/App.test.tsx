@@ -18,7 +18,6 @@ jest.mock("../forms/StepOneForm/StepOneForm", () => ({
 describe("App Component", () => {
   it("renders StepOneForm, StepTwoForm, and InternalNote", () => {
     render(<App />);
-
     expect(screen.getByText("Continue to Step Two")).toBeInTheDocument();
     expect(screen.getByText("Step Two Form Component")).toBeInTheDocument();
     expect(screen.getByText("Internal Note Component")).toBeInTheDocument();

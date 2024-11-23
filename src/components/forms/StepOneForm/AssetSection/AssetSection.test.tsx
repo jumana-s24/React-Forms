@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { AssetSection } from "./AssetSection";
 import { UseFormRegister } from "react-hook-form";
+import { StepOneFormValues } from "../../../../types";
 
 jest.mock("../../ui/InputField/InputField", () => ({
   InputField: (props: { label: string }) => <div>{props.label}</div>,
@@ -13,7 +14,7 @@ jest.mock("../../ui/SelectField/SelectField", () => ({
 jest.mock("../../ui/InfoIcon/InfoIcon", () => () => <div>InfoIcon</div>);
 
 describe("AssetSection component", () => {
-  const mockRegister: UseFormRegister<any> = jest.fn();
+  const mockRegister: UseFormRegister<StepOneFormValues> = jest.fn();
   const mockRemove = jest.fn();
 
   it("renders all form fields with correct labels", () => {
