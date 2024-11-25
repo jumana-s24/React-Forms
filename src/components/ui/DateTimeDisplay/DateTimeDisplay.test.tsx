@@ -23,7 +23,6 @@ describe("DateTimeDisplay component", () => {
   it("should update the time every second", async () => {
     render(<DateTimeDisplay />);
 
-    // Fast-forward 1 second and check if the time updated
     jest.advanceTimersByTime(1000);
 
     await waitFor(() => {

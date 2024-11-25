@@ -5,7 +5,6 @@ jest.mock("../../ui/DateTimeDisplay/DateTimeDisplay", () => () => (
   <div>Date and Time Display</div>
 ));
 
-// Mock the InputField component
 jest.mock("../../ui/InputField/InputField", () => ({
   InputField: (props: { label: string; name: string }) => (
     <div>
