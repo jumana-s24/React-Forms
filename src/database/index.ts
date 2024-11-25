@@ -57,7 +57,7 @@ export const objectStatusOptions: string[] = [
   "Demolition + Project development",
 ];
 
-export const energyClassOptions = [
+export const energyClassOptions: string[] = [
   "A+",
   "A",
   "B",

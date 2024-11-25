@@ -42,7 +42,7 @@ describe("SelectField component", () => {
     );
 
     expect(
-      within(screen.getByLabelText("Object Status")).getByText(
+      within(screen.getByText("Object Status")).getByText(
         "The status of the asset. Alternative words: Objektstatus"
       )
     ).toBeInTheDocument();

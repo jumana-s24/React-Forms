@@ -1,5 +1,5 @@
 import { UseFormRegister } from "react-hook-form";
-import { InputField } from "../../ui/InputField/InputField";
+import { InputField } from "../../../ui/InputField/InputField";
 
 interface OfferSectionProps {
   register: UseFormRegister<any>;

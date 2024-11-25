@@ -3,15 +3,15 @@ import { AssetSection } from "./AssetSection";
 import { UseFormRegister } from "react-hook-form";
 import { StepOneFormValues } from "../../../../types";
 
-jest.mock("../../ui/InputField/InputField", () => ({
+jest.mock("./../../../ui/InputField/InputField.tsx", () => ({
   InputField: (props: { label: string }) => <div>{props.label}</div>,
 }));
 
-jest.mock("../../ui/SelectField/SelectField", () => ({
+jest.mock("./../../../ui/SelectField/SelectField", () => ({
   SelectField: (props: { label: string }) => <div>{props.label}</div>,
 }));
 
-jest.mock("../../ui/InfoIcon/InfoIcon", () => () => <div>InfoIcon</div>);
+jest.mock("./../../../ui/InfoIcon/InfoIcon", () => () => <div>InfoIcon</div>);
 
 describe("AssetSection component", () => {
   const mockRegister: UseFormRegister<StepOneFormValues> = jest.fn();
@@ -37,8 +37,8 @@ describe("AssetSection component", () => {
       "Plot area",
       "Usable Area",
       "Yearly Revenue",
-      "Year Of Construction",
-      "Year Of Redevelopment",
+      "Year of Construction",
+      "Year of Redevelopment",
       "Monument Protection",
       "Asset Class",
       "Object Status",

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { StepOneForm } from "../forms/StepOneForm/StepOneForm";
 import { StepTwoForm } from "../forms/StepTwoForm/StepTwoForm";
-import { InternalNote } from "../forms/StepOneForm/InternalNote/InternalNote";
+import { InternalNote } from "../forms/InternalNote/InternalNote";
 import "./App.css";
 
 export const App = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { OfferSection } from "../OfferSection/OfferSection";
+import { OfferSection } from "./OfferSection/OfferSection";
 import { Asset, StepOneFormValues } from "../../../types";
 import { AssetSection } from "./AssetSection/AssetSection";
 
