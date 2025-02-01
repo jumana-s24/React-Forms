@@ -1,3 +1,6 @@
+# Description
+This React application provides an intuitive interface for asset management, featuring detailed forms for asset and financial data entry. Users can seamlessly navigate between steps to input, review, and save asset information efficiently.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
